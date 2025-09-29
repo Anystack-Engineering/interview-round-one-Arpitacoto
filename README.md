@@ -135,3 +135,18 @@ A repo containing:
 - ✅ Edge-case coverage (invalid email, empty lines, non-positive qty/price)  
 - ✅ Clean code & structure in tests (naming, small helpers OK)  
 - ✅ Bonus: property-based tests, schema validation (e.g., JSON Schema), or parameterized tests
+
+---
+
+## How to run (Python + pytest)
+
+Prereqs: Python 3.13 (or 3.9+ should work) and `venv`.
+
+```bash
+python -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+pytest -q
+```
+
+This executes tests under `tests/` that validate and extract insights using JSONPath (`jsonpath-ng`).
